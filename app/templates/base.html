@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCHOOL FORM 10 LEARNER’S AES MCES {% block title %}{% endblock %}</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              color1: "#209DD3"
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.webp') }}"
+    />
+  </head>
+  <body >
+    {% block content %}
+    <!-- content -->
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
+  </body>
+</html>

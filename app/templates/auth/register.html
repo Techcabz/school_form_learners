@@ -1,0 +1,111 @@
+{% extends "auth/template/auth_layout.html" %} {% block wrapper_content %}
+
+<!-- Sign Up Box -->
+<div
+  class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 mt-20 mb-10"
+>
+  <div
+    class="bg-white p-6 rounded-xl shadow-lg w-[320px] sm:w-[400px] backdrop-blur-sm"
+  >
+    <h2 class="text-xl font-bold text-center mb-4">Sign Up</h2>
+    <form id="registerForm" action="{{ url_for('main.register') }}" method="POST">
+      <!-- Firstname -->
+      <div class="mb-4">
+        <label for="Firstname" class="block text-sm font-medium mb-1"
+          >Firstname</label
+        >
+        <input
+          id="firstname"
+          name="firstname"
+          type="text"
+          placeholder="Enter Firstname"
+          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="Lastname" class="block text-sm font-medium mb-1"
+          >Lastname</label
+        >
+        <input
+          id="lastname"
+          type="text"
+          name="lastname"
+          placeholder="Enter Lastname"
+          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
+        />
+      </div>
+      <!-- <div class="mb-4">
+        <label for="Middlename" class="block text-sm font-medium mb-1"
+          >Middlename</label
+        >
+        <input
+          id="middlename"
+          type="text"
+          placeholder="Enter Middlename"
+          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
+        />
+      </div> -->
+
+      <!-- Username -->
+      <div class="mb-4">
+        <label for="Username" class="block text-sm font-medium mb-1"
+          >Username</label
+        >
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="Enter Username"
+          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
+        />
+      </div>
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium mb-1"
+          >Password</label
+        >
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter Password"
+          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium mb-1"
+          >Confirm Password</label
+        >
+        <input
+          id="password"
+          type="password"
+          name="confirm_password"
+          placeholder="Enter Confirm Password"
+          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
+        />
+      </div>
+      <!-- Login Button -->
+      <div class="mb-4">
+        <button
+          type="submit"
+          id="registerButton"
+          data-loading-text="Registering..."
+          class="w-full bg-color1 hover:bg-color1 text-white font-medium py-2 rounded-xl"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+    <!-- Footer Links -->
+    <div class="text-center text-sm">
+      Already have an account?
+      <a
+        href="{{ url_for('main.login') }}"
+        class="text-blue-500 hover:underline"
+        >Login</a
+      >
+    </div>
+  </div>
+</div>
+
+{% endblock %}
