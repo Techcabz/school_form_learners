@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SCHOOL FORM 10 LEARNER’S AES MCES {% block title %}{% endblock %}</title>
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>
+      SCHOOL FORM 10 LEARNER’S AES MCES {% block title %}{% endblock %}
+    </title>
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+    />
+
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
-   
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,18 +28,73 @@
           },
         },
       };
-    </script>
+    </script> -->
+
+    <link
+      href="{{ url_for('static', filename='node_modules/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+    <link href="{{ url_for('static', filename='css/style.css') }} " />
+    <link
+      href="{{ url_for('static', filename='css/colors/default.css') }}"
+      id="theme"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="{{ url_for('static', filename='css/datatables/datatables.min.css') }}"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/app.css') }}"
+    />
+    <!-- Default theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/alert/alertify.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/slider.css') }}"
+    />
     <link
       rel="shortcut icon"
       href="{{ url_for('static', filename='images/favicon.webp') }}"
     />
   </head>
-  <body >
+  <body style="margin: 0; padding: 0">
     {% block content %}
     <!-- content -->
     {% endblock %}
 
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="{{ url_for('static', filename='node_modules/jssor.slider-28.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='node_modules/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='node_modules/datatables/datatables.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='node_modules/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='node_modules/perfect-scrollbar.jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='node_modules/jquery.validate.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='node_modules/alertify.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='node_modules/jquery.redirect.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
     <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
   </body>
 </html>

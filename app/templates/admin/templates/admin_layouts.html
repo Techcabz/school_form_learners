@@ -1,0 +1,9 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<div class="fix-header card-no-border fix-sidebar">
+    {% include 'admin/templates/partials/_header.html' %}
+  
+    <div id="main-wrapper">{% block wrapper_content %} {% endblock %}</div>
+  </div>
+{% endblock %}

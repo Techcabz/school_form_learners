@@ -1,5 +1,50 @@
-<h1>Dashboard</h1>
-<a class="nav-link" href="{{ url_for('main.logout') }}">
-    <span class="menu-title">LOGOUT</span>
-    <i class="mdi mdi-hammer menu-icon"></i>
-  </a>
+{% extends "admin/templates/admin_layouts.html" %} {% block wrapper_content %}
+<div class="wrapper-admin">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <div class="card shadow">
+          <div class="card-body">
+            <div class="d-flex mb-4 no-block">
+              <h5 class="card-title mb-0 align-self-center">Chart Here</h5>
+            </div>
+            <div class="chart-area">
+              <canvas
+                id="chartInMemo"
+                style="height: 260px; width: 100%"
+              ></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+        <div class="row">
+          <div class="col-sm-12 row mb-4">
+            <div class="col-sm-12 row">
+              <div class="col-auto">
+                <div class="card shadow">
+                  <div class="card-body">
+                    <div
+                      class="d-flex flex-column mb-4 justify-content-start align-items-center gap-2 no-block"
+                    >
+                      <h5 class="card-title mb-0 align-self-center">
+                        Total Users:
+                      </h5>
+                      <h1>
+                        <strong>0</strong>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

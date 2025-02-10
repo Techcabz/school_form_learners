@@ -41,7 +41,6 @@ if (registerForm) {
 const loginForm = document.querySelector("#loginForm");
 
 if (loginForm) {
-  
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -91,4 +90,20 @@ function setLoadingState(button, isLoading) {
     button.disabled = false;
     button.classList.remove("opacity-50", "cursor-not-allowed");
   }
+}
+
+let statel = false;
+
+function toggle() {
+  if (statel) {
+    document.getElementById("password").setAttribute("type", "password");
+    statel = false;
+  } else {
+    document.getElementById("password").setAttribute("type", "text");
+    statel = true;
+  }
+}
+
+function myFunction(show) {
+  show.classList.toggle("fa-eye-slash");
 }

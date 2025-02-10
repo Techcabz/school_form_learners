@@ -35,3 +35,15 @@ def logout():
 @web_guard
 def dashboard():
     return render_template('admin/dashboard.html')
+
+
+@admin.route('/teacher')
+@web_guard
+def teacher():
+    return render_template('admin/teacher.html')
+
+
+@admin.route('/year')
+@web_guard
+def year():
+    return render_template('admin/year.html')

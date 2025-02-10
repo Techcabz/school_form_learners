@@ -1,60 +1,74 @@
 {% extends "auth/template/auth_layout.html" %} {% block wrapper_content %}
 
-<!-- Login Box -->
-<div
-  class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10"
->
-  <div
-    class="bg-white p-6 rounded-xl shadow-lg w-[320px] sm:w-[400px] backdrop-blur-sm"
-  >
-    <h2 class="text-xl font-bold text-center mb-4">Login</h2>
-    <form id="loginForm" action="{{ url_for('main.login') }}" method="POST">
-      <!-- Username -->
-      <div class="mb-4">
-        <label for="username" class="block text-sm font-medium mb-1"
-          >Username</label
-        >
-        <input
-          id="username"
-          name="username"
-          type="text"
-          placeholder="Enter Username"
-          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
-        />
+<div class="wrapper">
+  <div class="container-fluid">
+    <div
+      class="card o-hidden transparent border-0 my-5"
+      style="background: inherit !important; margin-top: 10px !important"
+    >
+      <div class="card-body p-0">
+        <div class="row p-0 mb-3">
+          <div class="col-2-lg col-md-4 col-sm-12"></div>
+          <div class="col-6-lg col-md-4 col-sm-12">
+            <div class="d-flex justify-content-center">
+              <form
+                id="loginForm"
+                action="{{ url_for('main.login') }}"
+                method="POST"
+                class="login"
+              >
+                <div class="mb-3">
+                  <h2>Login</h2>
+                </div>
+                <p id="error_status"></p>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Username"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3 pass-con">
+                  <label for="pasword" class="form-label">Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    class="form-control"
+                    id="password"
+                  />
+                  <span class="show-pass" onclick="toggle()">
+                    <i class="far fa-eye" onclick="myFunction(this)"></i>
+                  </span>
+                </div>
+
+                <input type="hidden" name="login" value="1" />
+                <div class="mb-3">
+                  <button
+                    type="submit"
+                    id="loginButton"
+                    data-loading-text="Logging in..."
+                    class="btn btn-re w-100"
+                  >
+                    Login
+                  </button>
+                </div>
+                <!-- <div class="mb-3 d-flex justify-content-between">
+                  &nbsp;
+                  <label for="email" class="link-type"
+                    ><a href="">Forgot Password</a></label
+                  >
+                </div> -->
+              </form>
+            </div>
+          </div>
+          <div class="col-2-lg col-md-4 col-sm-12"></div>
+        </div>
       </div>
-      <!-- Password -->
-      <div class="mb-4">
-        <label for="password" class="block text-sm font-medium mb-1"
-          >Password</label
-        >
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Enter Password"
-          class="w-full px-3 py-2 border border-gray-600 rounded-md text-black"
-        />
-      </div>
-      <!-- Login Button -->
-      <div class="mb-4">
-        <button
-          type="submit"
-          id="loginButton"
-          data-loading-text="Logging in..."
-          class="w-full bg-color1 hover:bg-color1 text-white font-medium py-2 rounded-xl"
-        >
-          Log in
-        </button>
-      </div>
-    </form>
-    <!-- Footer Links -->
-    <div class="text-center text-sm">
-      Don't have an account?
-      <a
-        href="{{ url_for('main.register') }}"
-        class="text-blue-500 hover:underline"
-        >Sign up</a
-      >
     </div>
   </div>
 </div>

@@ -1,0 +1,302 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f8f8;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background.webp");
+  background-position: center;
+  object-fit: cover;
+}
+
+.logo {
+  width: 55px;
+  margin-left: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.boxTopNav {
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0px !important;
+  background-color: #14261c;
+}
+
+.navbar-default {
+  position: fixed;
+  top: 0;
+  right: 0rem;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.top-navbar {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-header {
+  flex: 2;
+  border-right: none !important;
+}
+
+.navbar-collapse {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  margin-right: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.bg-custom-success {
+  background-color: #14261c !important;
+}
+.thead-custom {
+  background-color: #14261c !important;
+}
+
+.title-container {
+  margin-top: 5px;
+}
+
+.u-pro a {
+  border-left: none !important;
+}
+
+.logout {
+  color: red;
+}
+
+.logout:hover {
+  color: red;
+}
+
+.login-btn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #14261c;
+}
+
+.btn-re {
+  background-color: #14261c;
+
+  padding: 0.55rem;
+  display: block;
+  text-decoration: none;
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: none !important;
+  transition: 0.3s;
+}
+
+.btn-not {
+  background-color: #14261c;
+  margin-top: 10px;
+  padding: 0.55rem;
+
+  text-decoration: none;
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: none !important;
+  transition: 0.3s;
+}
+
+.btn-re:hover {
+  color: #fff;
+}
+.topbar .navbar-collapse {
+  border-bottom: none;
+}
+
+.wrapper {
+  width: 100%;
+
+  margin-top: 5.3rem;
+  margin-bottom: 2.5rem;
+}
+.wrapper-admin {
+  width: 100%;
+
+  margin-top: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.empty-box {
+  padding: 2px !important;
+}
+
+.image-carousel {
+  width: 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.content-memo {
+  padding: 20px !important;
+
+  margin-bottom: 10%;
+}
+
+.content-memo h3 {
+  margin-top: 5%;
+  font-size: 2rem;
+  padding: 5px;
+}
+.content-memo p {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.error-box {
+  margin-top: 10% !important;
+}
+
+.login {
+  width: 100%;
+  margin: 0 auto;
+  /* border: 1px solid #ccc; */
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  background: #fff !important;
+  animation: animate 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+}
+.login form {
+  margin-bottom: 30px !important;
+}
+
+.card {
+  background: #fff !important;
+}
+
+.account ul.dropdown-menu.show {
+  left: -50px;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-drop {
+  margin: 0px !important;
+  width: 100% !important;
+  padding: 10px !important;
+}
+
+.active {
+  background-color: #14261c;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.not-active {
+  padding: 10px;
+  color: #000;
+  border-radius: 10px;
+}
+
+.ajs-warning {
+  background-color: orange !important;
+  color: #fff !important;
+}
+#shareModalForm select[multiple] {
+  height: 200px !important;
+}
+
+.pass-con {
+  position: relative;
+}
+
+.pass-con span {
+  margin-top: -30px;
+  position: absolute;
+  right: 10px;
+}
+
+.prof-con {
+  position: relative;
+}
+
+.prof-con span {
+  margin-top: 0px;
+  position: absolute;
+  right: 0px;
+  background: inherit !important;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* reset all outline */
+textarea:focus,
+select:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  width: 100% !important;
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+#error_status {
+  color: rgb(202, 41, 41);
+}
+#aderror_status {
+  color: rgb(202, 41, 41);
+}
+
+#rresend-timer {
+  justify-content: start;
+  align-items: start;
+}
+
+#rresend-timer p {
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+  color: #000;
+  text-align: center;
+}
+
+.resend-btn {
+  border: none !important;
+  background: inherit !important;
+  color: orange !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+}
+
+.link-type a {
+  color: #14261c !important;
+}
