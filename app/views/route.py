@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, redirect, url_for, request
 from flask_login import  current_user
-from ..controllers.auth_controller import login_user_controller,logout_user_controller,register_user_controller
-from ..utils.web_utils import web_guard
+from app.controllers.admin_controller import dashboard_controller,pdf_templates
+from app.controllers.auth_controller import login_user_controller,logout_user_controller,register_user_controller
+from app.utils.web_utils import web_guard
 
 main = Blueprint('main', __name__)
 admin = Blueprint('admin', __name__, url_prefix='/admin')
@@ -31,10 +32,10 @@ def logout():
 
 
 # ADMINISTRATOR
-@admin.route('/dashboard')
+@admin.route('/dashboard', methods=['GET', 'POST', 'PUT', 'DELETE'])
 @web_guard
 def dashboard():
-    return render_template('admin/dashboard.html')
+    return dashboard_controller()
 
 
 @admin.route('/teacher')
@@ -47,3 +48,13 @@ def teacher():
 @web_guard
 def year():
     return render_template('admin/year.html')
+
+
+@admin.route('/pdf_template')
+@web_guard
+def pdf_template():
+    page = request.args.get('page', 'front')  # Default to 'front'
+    if page == 'front':
+        return render_template('file_layout/front_template.html')
+    else:
+        return render_template('file_layout/back_template.html')

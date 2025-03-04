@@ -34,6 +34,16 @@ class Config:
     JSON_SORT_KEYS = False
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024
 
+    FILE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "."))
+    EXCEL_PATH = os.getenv("EXCEL_PATH", os.path.join(FILE_DIR, r"app\static\files\layout.xlsx"))
+    PDF_PATH = os.getenv("EXCEL_PATH", os.path.join(FILE_DIR, r"app\static\files\view.pdf"))
+   
+    if os.name == "nt":  # Windows
+        WKHTMLTOPDF_PATH = os.getenv("WKHTMLTOPDF_PATH", r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+    else:  # Linux/Mac
+        WKHTMLTOPDF_PATH = os.getenv("WKHTMLTOPDF_PATH", "/usr/bin/wkhtmltopdf")
+
+
     @classmethod
     def Initialize_database(cls):
         """Auto-create MySQL database if selected and doesn't exist."""
